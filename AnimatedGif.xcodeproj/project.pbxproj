@@ -18,6 +18,7 @@
 		CCC3B9991C788F8E00FBE423 /* Options.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC3B99B1C788F8E00FBE423 /* Options.xib */; };
 		CCED59B6225F92CA00B53CF0 /* AnimatedGifWindowClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = CCED59B5225F92CA00B53CF0 /* AnimatedGifWindowClasses.h */; };
 		CCEF76C8218C83DB0050F7C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCEF76C6218C83DB0050F7C9 /* Localizable.strings */; };
+		FA065663240CEE0400CD32EF /* rga-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA065662240CEE0400CD32EF /* rga-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		CCEF76C9218C83ED0050F7C9 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CCEF76CA218C83F80050F7C9 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; usesTabs = 0; };
 		CCEF76CC218C8AFA0050F7C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA065662240CEE0400CD32EF /* rga-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rga-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		CC24BA981BF124350045BDC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA065662240CEE0400CD32EF /* rga-logo.png */,
 				CC1777E920A1E7DF0043C210 /* LICENSE.md */,
 				CC4486F01C8A3A50008520D2 /* thumbnail.png */,
 				CC4486F11C8A3A50008520D2 /* thumbnail@2x.png */,
@@ -119,6 +122,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC24BAA01BF124350045BDC7 /* Build configuration list for PBXNativeTarget "AnimatedGif" */;
 			buildPhases = (
+				FA065664240CFD0300CD32EF /* Run Script */,
 				CC24BA901BF124350045BDC7 /* Sources */,
 				CC24BA911BF124350045BDC7 /* Frameworks */,
 				CC24BA921BF124350045BDC7 /* Headers */,
@@ -144,7 +148,8 @@
 				TargetAttributes = {
 					CC24BA941BF124350045BDC7 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = SQ837JJYGQ;
+						DevelopmentTeam = TWP8WPFBP3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -175,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1777EC20A1E95D0043C210 /* LICENSE.md in Resources */,
+				FA065663240CEE0400CD32EF /* rga-logo.png in Resources */,
 				CCEF76C8218C83DB0050F7C9 /* Localizable.strings in Resources */,
 				CC4486F21C8A3A50008520D2 /* thumbnail.png in Resources */,
 				CCC3B9991C788F8E00FBE423 /* Options.xib in Resources */,
@@ -184,6 +190,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA065664240CFD0300CD32EF /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=~/.screen-saver/rga.gif;\nif [ ! -f \"$FILE\" ]; then\n    mkdir ~/.screen-saver/;\n    curl -o ~/.screen-saver/rga.gif \"https://rga-screensaver.s3-ap-southeast-1.amazonaws.com/rga.gif\";\nfi \n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC24BA901BF124350045BDC7 /* Sources */ = {
@@ -262,9 +290,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: koehmarc@gmx.de (RHZ2NT4CZR)";
+				CODE_SIGN_IDENTITY = "Apple Development: sikomo.eko@gmail.com (648G7N5KBP)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = SQ837JJYGQ;
+				DEVELOPMENT_TEAM = TWP8WPFBP3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -286,6 +314,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "R/GA Animated Gif";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -318,10 +347,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: koehmarc@gmx.de (RHZ2NT4CZR)";
+				CODE_SIGN_IDENTITY = "Apple Development: sikomo.eko@gmail.com (648G7N5KBP)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SQ837JJYGQ;
+				DEVELOPMENT_TEAM = TWP8WPFBP3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -335,6 +364,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "R/GA Animated Gif";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -342,11 +372,15 @@
 		CC24BAA11BF124350045BDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TWP8WPFBP3;
 				INFOPLIST_FILE = AnimatedGif/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				PRODUCT_BUNDLE_IDENTIFIER = "noname.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = rga.AnimatedGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = saver;
 			};
@@ -355,12 +389,16 @@
 		CC24BAA21BF124350045BDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TWP8WPFBP3;
 				INFOPLIST_FILE = AnimatedGif/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "noname.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = rga.AnimatedGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = saver;
 			};

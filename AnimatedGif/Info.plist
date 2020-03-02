@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>R/GA Animated GIF</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 Marco Köhler. All rights reserved.</string>
+	<string>Copyright © 2019 R/GA. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>AnimatedGifView</string>
 </dict>

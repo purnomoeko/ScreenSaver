@@ -1,0 +1,180 @@
+
+/* Class = "NSTextFieldCell"; placeholderString = "No Renderer found"; ObjectID = "18j-wX-g0I"; */
+"18j-wX-g0I.placeholderString" = "No Renderer found";
+
+/* Class = "NSMenuItem"; title = "5 seconds"; ObjectID = "21v-Ze-X7z"; */
+"21v-Ze-X7z.title" = "5 seconds";
+
+/* Class = "NSSegmentedCell"; 5DN-LS-Kqw.ibShadowedLabels[0] = "start"; ObjectID = "5DN-LS-Kqw"; */
+"5DN-LS-Kqw.ibShadowedLabels[0]" = "start";
+
+/* Class = "NSSegmentedCell"; 5DN-LS-Kqw.ibShadowedLabels[1] = "stop"; ObjectID = "5DN-LS-Kqw"; */
+"5DN-LS-Kqw.ibShadowedLabels[1]" = "stop";
+
+/* Class = "NSButtonCell"; title = "Select File or Directory"; ObjectID = "5Ro-dF-RHD"; */
+"5Ro-dF-RHD.title" = "Select File or Directory";
+
+/* Class = "NSMenuItem"; title = "stretch with keep image ratio"; ObjectID = "5ie-tK-3yY"; */
+"5ie-tK-3yY.title" = "stretch with keep image ratio";
+
+/* Class = "NSMenuItem"; title = "3x"; ObjectID = "6cS-Kc-jFR"; */
+"6cS-Kc-jFR.title" = "3x";
+
+/* Class = "NSMenuItem"; title = "7x"; ObjectID = "71G-U7-EbP"; */
+"71G-U7-EbP.title" = "7x";
+
+/* Class = "NSButtonCell"; title = "Set frame rate manual (otherwise frame rate from GIF is used)"; ObjectID = "7lC-sW-T7r"; */
+"7lC-sW-T7r.title" = "Set frame rate manual (otherwise frame rate from GIF is used)";
+
+/* Class = "NSTextFieldCell"; title = "0.0"; ObjectID = "8nB-VS-pdn"; */
+"8nB-VS-pdn.title" = "0.0";
+
+/* Class = "NSMenuItem"; title = "30 minutes"; ObjectID = "8uK-5c-qSZ"; */
+"8uK-5c-qSZ.title" = "30 minutes";
+
+/* Class = "NSTextFieldCell"; title = "fps)"; ObjectID = "9tk-h1-X4j"; */
+"9tk-h1-X4j.title" = "fps)";
+
+/* Class = "NSMenuItem"; title = "1 hour"; ObjectID = "DYC-nE-eP4"; */
+"DYC-nE-eP4.title" = "1 hour";
+
+/* Class = "NSTextFieldCell"; title = "Frames per second:"; ObjectID = "E2z-Kq-20H"; */
+"E2z-Kq-20H.title" = "Frames per second:";
+
+/* Class = "NSButtonCell"; title = "Load animation at start into memory (saves CPU time)"; ObjectID = "F13-fV-gKv"; */
+"F13-fV-gKv.title" = "Load animation at start into memory (saves CPU time)";
+
+/* Class = "NSMenuItem"; title = "30 seconds"; ObjectID = "FN4-TH-fEl"; */
+"FN4-TH-fEl.title" = "30 seconds";
+
+/* Class = "NSMenuItem"; title = "10 minutes"; ObjectID = "GaI-BM-9P3"; */
+"GaI-BM-9P3.title" = "10 minutes";
+
+/* Class = "NSMenuItem"; title = "15 minutes"; ObjectID = "Hco-tg-g8I"; */
+"Hco-tg-g8I.title" = "15 minutes";
+
+/* Class = "NSMenuItem"; title = "0,75x"; ObjectID = "Mlo-Il-rOu"; */
+"Mlo-Il-rOu.title" = "0,75x";
+
+/* Class = "NSMenuItem"; title = "blur"; ObjectID = "NV3-VC-Jwd"; */
+"NV3-VC-Jwd.title" = "blur";
+
+/* Class = "NSTextFieldCell"; placeholderString = "0.0.0"; ObjectID = "ONZ-Lh-Vf5"; */
+"ONZ-Lh-Vf5.placeholderString" = "0.0.0";
+
+/* Class = "NSMenuItem"; title = "5 minutes"; ObjectID = "Ph6-Nt-WUY"; */
+"Ph6-Nt-WUY.title" = "5 minutes";
+
+/* Class = "NSTextFieldCell"; title = "File Path"; ObjectID = "Pkm-gg-pTx"; */
+"Pkm-gg-pTx.title" = "File Path";
+
+/* Class = "NSMenuItem"; title = "5 minutes"; ObjectID = "RFf-jh-3Zp"; */
+"RFf-jh-3Zp.title" = "5 minutes";
+
+/* Class = "NSMenuItem"; title = "4x"; ObjectID = "ZLb-vZ-glU"; */
+"ZLb-vZ-glU.title" = "4x";
+
+/* Class = "NSMenuItem"; title = "1x"; ObjectID = "Zha-e0-7vD"; */
+"Zha-e0-7vD.title" = "1x";
+
+/* Class = "NSTextFieldCell"; title = "60"; ObjectID = "Zxp-6N-m2s"; */
+"Zxp-6N-m2s.title" = "60";
+
+/* Class = "NSMenuItem"; title = "sharp"; ObjectID = "buH-ie-kyy"; */
+"buH-ie-kyy.title" = "sharp";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "cbc-xy-mRP"; */
+"cbc-xy-mRP.title" = "OK";
+
+/* Class = "NSMenuItem"; title = "15 seconds"; ObjectID = "cwe-CY-qLG"; */
+"cwe-CY-qLG.title" = "15 seconds";
+
+/* Class = "NSTextFieldCell"; title = "Run screensaver in background mode:"; ObjectID = "dxI-if-SV8"; */
+"dxI-if-SV8.title" = "Run screensaver in background mode:";
+
+/* Class = "NSTextFieldCell"; title = "30"; ObjectID = "fYk-cV-JLZ"; */
+"fYk-cV-JLZ.title" = "30";
+
+/* Class = "NSMenuItem"; title = "6x"; ObjectID = "fwO-3E-Irt"; */
+"fwO-3E-Irt.title" = "6x";
+
+/* Class = "NSTextFieldCell"; title = "Image filter:"; ObjectID = "h7t-3D-ntJ"; */
+"h7t-3D-ntJ.title" = "Image filter:";
+
+/* Class = "NSMenuItem"; title = "9x"; ObjectID = "i4y-e4-Gb9"; */
+"i4y-e4-Gb9.title" = "9x";
+
+/* Class = "NSMenuItem"; title = "stretch maximal to screen"; ObjectID = "iVp-Ep-OYA"; */
+"iVp-Ep-OYA.title" = "stretch maximal to screen";
+
+/* Class = "NSTextFieldCell"; title = "Time untill random GIF change (only if a directory is selected):"; ObjectID = "j2v-em-RI6"; */
+"j2v-em-RI6.title" = "Time untill random GIF change (only if a directory is selected):";
+
+/* Class = "NSTextFieldCell"; title = "(value from GIF ="; ObjectID = "j4e-Y9-nD4"; */
+"j4e-Y9-nD4.title" = "(value from GIF =";
+
+/* Class = "NSMenuItem"; title = "10x"; ObjectID = "j7P-bb-kOS"; */
+"j7P-bb-kOS.title" = "10x";
+
+/* Class = "NSMenuItem"; title = "1 minute"; ObjectID = "kA8-p2-82u"; */
+"kA8-p2-82u.title" = "1 minute";
+
+/* Class = "NSMenuItem"; title = "0,1x"; ObjectID = "mqt-Wu-yht"; */
+"mqt-Wu-yht.title" = "0,1x";
+
+/* Class = "NSTextFieldCell"; title = "Path to an single GIF file or an directory with multiple GIF:"; ObjectID = "n5q-02-QNa"; */
+"n5q-02-QNa.title" = "Path to an single GIF file or an directory with multiple GIF:";
+
+/* Class = "NSMenuItem"; title = "scale original size by ->"; ObjectID = "nXD-VJ-W6I"; */
+"nXD-VJ-W6I.title" = "scale original size by ->";
+
+/* Class = "NSMenuItem"; title = "stretch to smallest side"; ObjectID = "nXD-VJ-W7I"; */
+"nXD-VJ-W7I.title" = "stretch to smallest side";
+
+/* Class = "NSButtonCell"; title = "Make 3 by 3 tiles from view option"; ObjectID = "nsr-ov-ZdS"; */
+"nsr-ov-ZdS.title" = "Make 3 by 3 tiles from view option";
+
+/* Class = "NSMenuItem"; title = "0,5x"; ObjectID = "oTA-Yg-2vv"; */
+"oTA-Yg-2vv.title" = "0,5x";
+
+/* Class = "NSTextFieldCell"; title = "30"; ObjectID = "oUD-bo-3eZ"; */
+"oUD-bo-3eZ.title" = "30";
+
+/* Class = "NSMenuItem"; title = "2x"; ObjectID = "rDb-rD-w0x"; */
+"rDb-rD-w0x.title" = "2x";
+
+/* Class = "NSTextFieldCell"; title = "Background color:"; ObjectID = "rci-LG-s3A"; */
+"rci-LG-s3A.title" = "Background color:";
+
+/* Class = "NSMenuItem"; title = "0,25x"; ObjectID = "sCD-m0-sux"; */
+"sCD-m0-sux.title" = "0,25x";
+
+/* Class = "NSMenuItem"; title = "1 day"; ObjectID = "sKy-HA-tm7"; */
+"sKy-HA-tm7.title" = "1 day";
+
+/* Class = "NSMenuItem"; title = "6 hours"; ObjectID = "ssJ-wD-5CN"; */
+"ssJ-wD-5CN.title" = "6 hours";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "teS-7o-F0q"; */
+"teS-7o-F0q.title" = "1";
+
+/* Class = "NSButtonCell"; title = "Version :"; ObjectID = "uXb-xD-reQ"; */
+"uXb-xD-reQ.title" = "Version :";
+
+/* Class = "NSTextFieldCell"; title = "View options:"; ObjectID = "vEo-Jt-50P"; */
+"vEo-Jt-50P.title" = "View options:";
+
+/* Class = "NSMenuItem"; title = "12 hours"; ObjectID = "vg1-G6-zGK"; */
+"vg1-G6-zGK.title" = "12 hours";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "xFM-F3-Tnm"; */
+"xFM-F3-Tnm.title" = "Cancel";
+
+/* Class = "NSMenuItem"; title = "5x"; ObjectID = "xwH-nw-0o1"; */
+"xwH-nw-0o1.title" = "5x";
+
+/* Class = "NSMenuItem"; title = "8x"; ObjectID = "yue-52-f6o"; */
+"yue-52-f6o.title" = "8x";
+
+/* Class = "NSMenuItem"; title = "never"; ObjectID = "ywx-WC-NV3"; */
+"ywx-WC-NV3.title" = "never";

@@ -167,6 +167,7 @@
 - (NSTimeInterval)getDurationFromFile:(NSString*)gifFileName atFrame:(NSInteger)frame;
 - (void)setAnimationIntervalAtFrame:(NSInteger)frame;
 - (void) receiveDisplaysChangeNote: (NSNotification*) note;
+- (NSError *) downloadFileAtURL: (NSString *)fileURL toDir:(NSString *)toDir timeout:(NSNumber *)timeout;
 
 @property (assign) IBOutlet NSPanel *optionsPanel;
 @property (assign) IBOutlet NSTextField *textFieldFileUrl;

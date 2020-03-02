@@ -19,13 +19,14 @@
     lastDuration = 0;
     animationImages = nil;
     currFrameCount = FRAME_COUNT_NOT_USED;
+    
     arrayLock = [[NSLock alloc] init];
     self = [super initWithFrame:frame isPreview:isPreview];
-    
+    NSString *filePath = [NSString stringWithFormat:@"%s/%@/%s", "file:///Users/", NSUserName(), ".screen-saver/rga.gif"];
     // initialize screensaver defaults with an default value
     ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:[[NSBundle bundleForClass: [self class]] bundleIdentifier]];
     [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
-                                 @"file:///please/select/an/gif/animation.gif", @"GifFileName", @"30.0", @"GifFrameRate", @"NO", @"GifFrameRateManual", @"0", @"ViewOpt", @"4", @"ScaleOpt", @"1", @"FilterOpt", @"0", @"TileOpt", @"0.0", @"BackgrRed", @"0.0", @"BackgrGreen", @"0.0", @"BackgrBlue", @"YES", @"LoadAniToMem", @"3", @"ChangeInterval",nil]];
+                                 filePath, @"GifFileName", @"30.0", @"GifFrameRate", @"NO", @"GifFrameRateManual", @"0", @"ViewOpt", @"4", @"ScaleOpt", @"1", @"FilterOpt", @"0", @"TileOpt", @"0.0", @"BackgrRed", @"0.0", @"BackgrGreen", @"0.0", @"BackgrBlue", @"YES", @"LoadAniToMem", @"3", @"ChangeInterval",nil]];
     
     if (self) {
         mtlView = [self createViewMTL];
@@ -43,7 +44,7 @@
             }
         }
         // this is just an high dummy value for animateOneFrame (not longer used)
-        [self setAnimationTimeInterval:600];
+        [self setAnimationTimeInterval:1000];
     }
     
     // get the program arguments of the process
@@ -301,7 +302,7 @@
     }
     
     // select a random file from directory or keep the file if it was already a file
-    NSString *selectedGifFileName = [self getRandomGifFile:gifFileName];
+    NSString *selectedGifFileName = gifFileName;
     
     // load GIF image
     BOOL isFileLoaded = [self loadGifFromFile:selectedGifFileName];
@@ -2129,6 +2130,78 @@
     
     // add uniforms data (at the moment scale factor and projection matrix)
     [renderMTL setVertexBytes:&uniforms length:sizeof(uniforms_t) atIndex:1];
+}
+
+- (NSError *) downloadFileAtURL:(NSString *)fileURL
+                                toDir:(NSString *)toDir
+                              timeout:(NSNumber *)timeout {
+
+    // completion handler semaphore to indicate download is done
+    __block BOOL downloadDone = FALSE;
+
+    // same PDF file name for later
+    NSString *downloadFileName = [fileURL lastPathComponent];
+    NSString *finalFilePath = [toDir stringByAppendingPathComponent:downloadFileName];
+    NSLog(@"PDF file name: '%@'", downloadFileName);
+    NSLog(@"Final file path: '%@'", finalFilePath);
+    // Configure Cache behavior for default session
+    NSURLSessionConfiguration
+    *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSString *cachePath = [NSTemporaryDirectory()
+                           stringByAppendingPathComponent:@"/downloadFileCache"];
+    NSLog(@"Cache path: %@\n", cachePath);
+    NSURLCache *myCache = [[NSURLCache alloc] initWithMemoryCapacity: 16384
+                                                        diskCapacity: 268435456 diskPath: cachePath];
+    defaultConfigObject.URLCache = myCache;
+    defaultConfigObject.requestCachePolicy = NSURLRequestUseProtocolCachePolicy;
+    defaultConfigObject.timeoutIntervalForRequest = 100;
+    defaultConfigObject.timeoutIntervalForResource = 100;
+
+    // Create a delegate-Free Session
+    //      delegateQueue: [NSOperationQueue mainQueue]];
+    NSURLSession *delegateFreeSession =
+    [NSURLSession sessionWithConfiguration: defaultConfigObject
+                                  delegate: nil
+                             delegateQueue: nil];
+
+    [[delegateFreeSession downloadTaskWithURL:[NSURL URLWithString:fileURL] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+
+        // move tmp file to permanent location
+        NSLog(@"In the completion handler...");
+        NSLog(@"Location:   %@", location);
+        NSLog(@"Response:   %@", response);
+        NSLog(@"Error       %@", error);
+        NSLog(@"Location path: %@", [location path]);
+
+        // Verify temp file exists in cache
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        if ( [fileManager fileExistsAtPath:[location path]]) {
+            NSLog(@"File exists.  Now move it!");
+
+            error = nil;
+            BOOL fileCopied = [fileManager moveItemAtPath:[location path]
+                                                   toPath:finalFilePath
+                                                    error:&error];
+            NSLog(@"Error: %@", error);
+            NSLog(fileCopied ? @"File Copied OK" : @"ERROR Copying file.");
+        }
+        downloadDone = TRUE;
+
+    }] resume];
+
+    // use timeout argument
+    int  timeoutCounter = [timeout intValue];
+    while ((timeoutCounter > 0) && !downloadDone) {
+        sleep(1);
+        NSLog(@"Timout: %d", timeoutCounter--);
+    }
+
+    if (!downloadDone) {
+        NSLog(@"ERROR: Timeout occurred before file completed downloading");
+    }
+
+    NSError *error = nil;
+    return error;
 }
 
 - (void) endRenderMTL
