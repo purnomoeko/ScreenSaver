@@ -10,8 +10,6 @@
 		CC1777EC20A1E95D0043C210 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = CC1777E920A1E7DF0043C210 /* LICENSE.md */; };
 		CC24BA9B1BF124350045BDC7 /* AnimatedGifView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC24BA9A1BF124350045BDC7 /* AnimatedGifView.h */; };
 		CC24BA9D1BF124350045BDC7 /* AnimatedGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC24BA9C1BF124350045BDC7 /* AnimatedGifView.m */; };
-		CC4486F21C8A3A50008520D2 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4486F01C8A3A50008520D2 /* thumbnail.png */; };
-		CC4486F31C8A3A50008520D2 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4486F11C8A3A50008520D2 /* thumbnail@2x.png */; };
 		CC52A2E8224ECC3D00ADC1D0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = CC52A2E7224ECC3D00ADC1D0 /* Shaders.metal */; };
 		CC52A2EA224ECD2400ADC1D0 /* Structs.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52A2E9224ECD0E00ADC1D0 /* Structs.h */; };
 		CC5E750C20FBCCBF0010ACDE /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5E750E20FBCCBF0010ACDE /* About.xib */; };
@@ -19,6 +17,7 @@
 		CCED59B6225F92CA00B53CF0 /* AnimatedGifWindowClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = CCED59B5225F92CA00B53CF0 /* AnimatedGifWindowClasses.h */; };
 		CCEF76C8218C83DB0050F7C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCEF76C6218C83DB0050F7C9 /* Localizable.strings */; };
 		FA065663240CEE0400CD32EF /* rga-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA065662240CEE0400CD32EF /* rga-logo.png */; };
+		FAC35C8F240DFF3B00FE1F12 /* bash.sh in Resources */ = {isa = PBXBuildFile; fileRef = FAC35C8E240DFF3A00FE1F12 /* bash.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +28,6 @@
 		CC24BA9A1BF124350045BDC7 /* AnimatedGifView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedGifView.h; sourceTree = "<group>"; };
 		CC24BA9C1BF124350045BDC7 /* AnimatedGifView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedGifView.m; sourceTree = "<group>"; };
 		CC39BE001EDAD834008FCA5C /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/Options.xib; sourceTree = "<group>"; };
-		CC4486F01C8A3A50008520D2 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbnail.png; path = extra/thumbnail.png; sourceTree = SOURCE_ROOT; };
-		CC4486F11C8A3A50008520D2 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbnail@2x.png"; path = "extra/thumbnail@2x.png"; sourceTree = SOURCE_ROOT; };
 		CC52A2E7224ECC3D00ADC1D0 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		CC52A2E9224ECD0E00ADC1D0 /* Structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Structs.h; sourceTree = "<group>"; };
 		CCABA29F218921D300E30E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Options.xib; sourceTree = "<group>"; };
@@ -45,6 +42,7 @@
 		CCEF76CA218C83F80050F7C9 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; usesTabs = 0; };
 		CCEF76CC218C8AFA0050F7C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA065662240CEE0400CD32EF /* rga-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rga-logo.png"; sourceTree = "<group>"; };
+		FAC35C8E240DFF3A00FE1F12 /* bash.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = bash.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +75,7 @@
 		CC24BA971BF124350045BDC7 /* AnimatedGif */ = {
 			isa = PBXGroup;
 			children = (
+				FAC35C8E240DFF3A00FE1F12 /* bash.sh */,
 				CC24BA9A1BF124350045BDC7 /* AnimatedGifView.h */,
 				CC24BA9C1BF124350045BDC7 /* AnimatedGifView.m */,
 				CCED59B5225F92CA00B53CF0 /* AnimatedGifWindowClasses.h */,
@@ -95,8 +94,6 @@
 			children = (
 				FA065662240CEE0400CD32EF /* rga-logo.png */,
 				CC1777E920A1E7DF0043C210 /* LICENSE.md */,
-				CC4486F01C8A3A50008520D2 /* thumbnail.png */,
-				CC4486F11C8A3A50008520D2 /* thumbnail@2x.png */,
 				CC24BA991BF124350045BDC7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -122,7 +119,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC24BAA01BF124350045BDC7 /* Build configuration list for PBXNativeTarget "AnimatedGif" */;
 			buildPhases = (
-				FA065664240CFD0300CD32EF /* Run Script */,
 				CC24BA901BF124350045BDC7 /* Sources */,
 				CC24BA911BF124350045BDC7 /* Frameworks */,
 				CC24BA921BF124350045BDC7 /* Headers */,
@@ -179,39 +175,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC35C8F240DFF3B00FE1F12 /* bash.sh in Resources */,
 				CC1777EC20A1E95D0043C210 /* LICENSE.md in Resources */,
 				FA065663240CEE0400CD32EF /* rga-logo.png in Resources */,
 				CCEF76C8218C83DB0050F7C9 /* Localizable.strings in Resources */,
-				CC4486F21C8A3A50008520D2 /* thumbnail.png in Resources */,
 				CCC3B9991C788F8E00FBE423 /* Options.xib in Resources */,
 				CC5E750C20FBCCBF0010ACDE /* About.xib in Resources */,
-				CC4486F31C8A3A50008520D2 /* thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FA065664240CFD0300CD32EF /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FILE=~/.screen-saver/rga.gif;\nif [ ! -f \"$FILE\" ]; then\n    mkdir ~/.screen-saver/;\n    curl -o ~/.screen-saver/rga.gif \"https://rga-screensaver.s3-ap-southeast-1.amazonaws.com/rga.gif\";\nfi \n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC24BA901BF124350045BDC7 /* Sources */ = {

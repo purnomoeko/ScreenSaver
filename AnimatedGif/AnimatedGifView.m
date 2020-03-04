@@ -23,11 +23,18 @@
     arrayLock = [[NSLock alloc] init];
     self = [super initWithFrame:frame isPreview:isPreview];
     NSString *filePath = [NSString stringWithFormat:@"%s/%@/%s", "file:///Users/", NSUserName(), ".screen-saver/rga.gif"];
+    
     // initialize screensaver defaults with an default value
+    /* Disable downloading file for this
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:filePath]){
+        NSString *url = @"https://rga-screensaver.s3-ap-southeast-1.amazonaws.com/rga.gif";
+        [self downloadFileAtURL:url toDir:filePath timeout:[[NSNumber alloc] initWithInt:10000 ]];
+    }
+     */
     ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:[[NSBundle bundleForClass: [self class]] bundleIdentifier]];
     [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
                                  filePath, @"GifFileName", @"30.0", @"GifFrameRate", @"NO", @"GifFrameRateManual", @"0", @"ViewOpt", @"4", @"ScaleOpt", @"1", @"FilterOpt", @"0", @"TileOpt", @"0.0", @"BackgrRed", @"0.0", @"BackgrGreen", @"0.0", @"BackgrBlue", @"YES", @"LoadAniToMem", @"3", @"ChangeInterval",nil]];
-    
     if (self) {
         mtlView = [self createViewMTL];
         if (mtlView==nil)
